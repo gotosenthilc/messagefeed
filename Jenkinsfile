@@ -1,6 +1,4 @@
-node ('worker_node1') {
-     stage('Source') {
-         // Get some code from our Git repository
-         git 'https://github.com/gotosenthilc/messagefeed.git'
-      }
+#!/usr/bin/env groovy
+node {
+echo 'Hello World'
 }
