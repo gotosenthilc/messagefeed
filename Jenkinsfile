@@ -1,10 +1,6 @@
-pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-    }
+node ('worker_node1') {
+     stage('Source') {
+         // Get some code from our Git repository
+         git 'https://github.com/gotosenthilc/messagefeed.git'
+      }
 }
